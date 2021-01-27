@@ -1,0 +1,137 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/getPairedDevicesBtn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="get paired devices" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="disecover" />
+
+                <Button
+                    android:id="@+id/discoverabilityBtn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="discoverability" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/textMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textShortMessage" />
+
+                <Button
+                    android:id="@+id/sendBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="send" />
+
+                <TextView
+                    android:id="@+id/msg_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MESSAGE" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textViewDiscover"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Discovered devices"
+                android:textColor="@color/colorPrimary"
+                android:layout_margin="4dp"/>
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:id="@+id/listViewDiscover"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/pairedDevicesTV2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text=" Paired devices"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/pairedDevicesTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text=""
+                android:textColor="#000"/>
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="400dp"
+                android:id="@+id/listViewPaired"/>
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@android:color/darker_gray"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
